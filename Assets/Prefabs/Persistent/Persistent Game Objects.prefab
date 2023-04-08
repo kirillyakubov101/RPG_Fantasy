@@ -59,6 +59,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -288,6 +289,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 5842444341802137420}
     m_Modifications:
     - target: {fileID: 2158441298115907420, guid: a3db49d93e736b04988ef48b56c1917b,
@@ -351,6 +353,7 @@ PrefabInstance:
       value: Center DataBase Of Enemeies
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a3db49d93e736b04988ef48b56c1917b, type: 3}
 --- !u!4 &96101385884142319 stripped
 Transform:
@@ -363,6 +366,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 5842444341802137420}
     m_Modifications:
     - target: {fileID: 4462299575043673174, guid: 4fcdb3642e50b294db10ef65365103d1,
@@ -426,6 +430,7 @@ PrefabInstance:
       value: Saving
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fcdb3642e50b294db10ef65365103d1, type: 3}
 --- !u!4 &2187936939266752117 stripped
 Transform:

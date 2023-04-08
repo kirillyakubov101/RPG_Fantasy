@@ -20,6 +20,16 @@ namespace FantasyTown.Saving
             stream.Close();
         }
 
+        public static void AppendFile(object state)
+        {
+
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Append);
+
+            formatter.Serialize(stream, state);
+            stream.Close();
+        }
+
         public static object LoadFile()
         {
             BinaryFormatter formatter = new BinaryFormatter();

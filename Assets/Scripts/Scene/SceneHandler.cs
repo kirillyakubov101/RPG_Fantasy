@@ -32,11 +32,13 @@ public class SceneHandler : MonoBehaviour,ISaveable
     private IEnumerator LoadTheGame()
     {
         canvasGroup.alpha = 1;
-        yield return SceneManager.LoadSceneAsync(0);
-
-        yield return new WaitForSeconds(3f);
+        SavingWrapper.Instance.LoadMainData();
+        _currentLevelIndex = SavingWrapper.Instance.GetLevelIndexFromData();
+        print("Loading scene: " + _currentLevelIndex);
+        yield return SceneManager.LoadSceneAsync(_currentLevelIndex);
+        yield return new WaitForSeconds(1f);
         SavingWrapper.Instance.LoadAll();
-
+        yield return new WaitForSeconds(1f);
         canvasGroup.alpha = 0;
 
 
@@ -44,7 +46,9 @@ public class SceneHandler : MonoBehaviour,ISaveable
 
     public void CaptureState()
     {
-       //
+        _currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        SavingWrapper.Instance.Data.levelIndex = _currentLevelIndex;
+        print("saving scene: " + _currentLevelIndex);
     }
 
     public void RestoreState()
